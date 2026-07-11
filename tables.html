@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Laboratório de Tabelas e Seletores CSS</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <nav id="main-menu">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="form.html">Formulários</a></li>
+        <li><a href="tables.html">Tabelas</a></li>
+        <li><a href="lists.html">Listas</a></li>
+      </ul>
+    </nav>
+
+    <h1>Laboratório: Estruturas de Tabelas para Estilização</h1>
+    <p>
+      Utilize as tabelas abaixo como base para aplicar regras de CSS. Inspecione
+      o código-fonte para identificar as classes, IDs e atributos de dados
+      disponíveis em cada estrutura.
+    </p>
+    <hr />
+
+    <h2>1. Inventário de Equipamentos</h2>
+    <p>Lista de ativos disponíveis e sua situação de garantia.</p>
+
+    <table
+      id="tabela-inventario"
+      border="1"
+      cellspacing="0"
+      cellpadding="8"
+      width="100%"
+    >
+      <thead>
+        <tr>
+          <th>Cód</th>
+          <th>Equipamento</th>
+          <th>Setor</th>
+          <th>Quantidade</th>
+          <th>Garantia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>Monitor 27"</td>
+          <td>Design</td>
+          <td>12</td>
+          <td>Ativa</td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Notebook Core i7</td>
+          <td>Desenvolvimento</td>
+          <td>8</td>
+          <td>Ativa</td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td>Teclado Mecânico</td>
+          <td>Desenvolvimento</td>
+          <td>15</td>
+          <td>Expirada</td>
+        </tr>
+        <tr>
+          <td>004</td>
+          <td>Cadeira Ergonômica</td>
+          <td>RH</td>
+          <td>4</td>
+          <td>Ativa</td>
+        </tr>
+        <tr>
+          <td>005</td>
+          <td>Projetor 4K</td>
+          <td>Sala de Reunião</td>
+          <td>1</td>
+          <td>Expirada</td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+
+    <h2>2. Painel de Tarefas</h2>
+    <p>Acompanhamento de status do projeto trimestral.</p>
+
+    <table
+      class="tabela-tarefas"
+      border="1"
+      cellspacing="0"
+      cellpadding="8"
+      width="100%"
+    >
+      <caption>
+        Status do Projeto Trimestral
+      </caption>
+      <thead>
+        <tr>
+          <th>Tarefa</th>
+          <th>Responsável</th>
+          <th>Prioridade</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Configurar Banco de Dados</td>
+          <td>Equipe Backend</td>
+          <td data-prioridade="alta">Alta</td>
+          <td data-status="concluido">Concluído</td>
+        </tr>
+        <tr>
+          <td>Criar Interface de Login</td>
+          <td>Equipe Frontend</td>
+          <td data-prioridade="media">Média</td>
+          <td data-status="em-andamento">Em Andamento</td>
+        </tr>
+        <tr>
+          <td>Testes de Segurança</td>
+          <td>Equipe QA</td>
+          <td data-prioridade="alta">Alta</td>
+          <td data-status="pendente">Pendente</td>
+        </tr>
+        <tr>
+          <td>Atualizar Documentação</td>
+          <td>Equipe Suporte</td>
+          <td data-prioridade="baixa">Baixa</td>
+          <td data-status="pendente">Pendente</td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+
+    <h2>3. Cronograma de Conferência</h2>
+    <p>Grade de horários e distribuição de salas para o evento.</p>
+
+    <table
+      id="tabela-cronograma"
+      border="1"
+      cellspacing="0"
+      cellpadding="8"
+      width="100%"
+    >
+      <thead>
+        <tr>
+          <th>Horário</th>
+          <th>Auditório Principal</th>
+          <th>Sala A (Workshops)</th>
+          <th>Sala B (Networking)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>08:00</th>
+          <td colspan="3" class="evento-geral">
+            Credenciamento e Café de Boas-Vindas
+          </td>
+        </tr>
+        <tr>
+          <th>09:30</th>
+          <td class="palestra">Keynote: O Futuro da Tecnologia</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>11:00</th>
+          <td class="palestra">Painel: Inteligência Artificial</td>
+          <td class="workshop">Mão na Massa: Cloud Computing</td>
+          <td class="networking">Sessão de Mentoria</td>
+        </tr>
+        <tr>
+          <th>12:30</th>
+          <td colspan="3" class="evento-geral">Intervalo para Almoço</td>
+        </tr>
+        <tr>
+          <th>14:00</th>
+          <td></td>
+          <td class="workshop">Segurança da Informação</td>
+          <td class="networking">Rodada de Negócios</td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+
+
+    <h2>4. Cotação de Suprimentos</h2>
+    <p>Orçamento detalhado para aprovação do setor financeiro.</p>
+
+    <table
+      class="tabela-orcamento"
+      border="1"
+      cellspacing="0"
+      cellpadding="8"
+      width="100%"
+    >
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantidade</th>
+          <th>Fornecedor</th>
+          <th>Valor Unitário</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Papel A4 (Caixa)</td>
+          <td>10</td>
+          <td>Papelaria Central</td>
+          <td class="valor-monetario">150.00</td>
+          <td class="valor-monetario subtotal">1500.00</td>
+        </tr>
+        <tr>
+          <td>Cartucho de Tinta Preto</td>
+          <td>5</td>
+          <td>Tech Suprimentos</td>
+          <td class="valor-monetario">85.50</td>
+          <td class="valor-monetario subtotal">427.50</td>
+        </tr>
+        <tr>
+          <td>Canetas Azuis (Caixa)</td>
+          <td>20</td>
+          <td>Papelaria Central</td>
+          <td class="valor-monetario">12.00</td>
+          <td class="valor-monetario subtotal">240.00</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4" align="right">Valor Total da Cotação:</th>
+          <th class="valor-monetario total-final">2167.50</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
+ 

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Laboratório de Listas HTML</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+  <body>
+    
+    <nav id="main-menu">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="form.html">Formulários</a></li>
+        <li><a href="tables.html">Tabelas</a></li>
+        <li><a href="lists.html">Listas</a></li>
+      </ul>
+    </nav>
+
+    <h1>Laboratório: Estruturas de Listas em HTML</h1>
+    <p>
+      Este documento demonstra os diferentes tipos de listas nativas do HTML e
+      seus atributos de formatação estrutural.
+    </p>
+    <hr />
+
+    <h2>1. Listas Não Ordenadas (&lt;ul&gt;)</h2>
+    <p>
+      Utilizadas quando a ordem dos itens não altera o sentido ou a compreensão
+      do conteúdo.
+    </p>
+
+    <ul>
+      <li>Configuração de Ambiente</li>
+      <li>
+        Instalação de Dependências
+        <ul>
+          <li>Bibliotecas de Frontend</li>
+          <li>Módulos de Backend</li>
+        </ul>
+      </li>
+      <li>Configuração de Variáveis Globais</li>
+    </ul>
+
+    <hr />
+
+    <h2>2. Listas Ordenadas (&lt;ol&gt;)</h2>
+    <p>
+      Utilizadas quando a sequência dos itens é estritamente importante, como em
+      um passo a passo, ranking ou cronograma.
+    </p>
+
+    <h3>Ordem Padrão (Numérica)</h3>
+    <ol>
+      <li>Levantamento de Requisitos</li>
+      <li>Modelagem de Dados</li>
+      <li>Desenvolvimento da Interface</li>
+    </ol>
+
+    <h3>Atributo: start (Iniciando de um valor específico)</h3>
+    <p>Adicionando o atributo <code>start="5" na tag da lista:</p>
+    <ol start="5">
+      <li>Testes Unitários</li>
+      <li>Homologação com o Cliente</li>
+    </ol>
+
+    <h3>Atributo: reversed (Contagem regressiva)</h3>
+    <p>
+      Adicionando o atributo booleano <code>reversed</code> na tag da lista:
+    </p>
+    <ol reversed>
+      <li>Revisão Final de Código</li>
+      <li>Backup do Banco de Dados</li>
+      <li>Migração para Produção</li>
+    </ol>
+
+    <h3>Atributo: type (Formatos de numeração alternativos)</h3>
+    <p>Letras maiúsculas usando <code>type="A"</code>:</p>
+    <ol type="A">
+      <li>Ambiente de Desenvolvimento</li>
+      <li>Ambiente de Testes</li>
+      <li>Ambiente de Produção</li>
+    </ol>
+
+    <p>Algarismos Romanos usando <code>type="I"</code>:</p>
+    <ol type="I">
+      <li>Módulo de Autenticação</li>
+      <li>Módulo de Pagamentos</li>
+    </ol>
+
+    <h3>Atributo na tag do item: value</h3>
+    <p>
+      A tag <code>&lt;li&gt;</code> pode receber o atributo
+      <code>value</code> para forçar um salto na numeração. O item abaixo
+      recebeu <code>value="15"</code>:
+    </p>
+    <ol>
+      <li>Passo inicial (1)</li>
+      <li>Passo seguinte (2)</li>
+      <li value="15">Passo com salto manual (15)</li>
+      <li>Passo automático (16)</li>
+    </ol>
+
+    <hr />
+
+    <h2>3. Listas de Definição ou Descrição (&lt;dl&gt;)</h2>
+    <p>
+      Estrutura utilizada para agrupar pares de termos e suas respectivas
+      descrições, funcionando de maneira semelhante a um dicionário ou glossário
+      de conceitos.
+    </p>
+
+    <dl>
+      <dt><strong>&lt;dt&gt; (Definition Term)</strong></dt>
+      <dd>
+        Define o termo, nome ou conceito que será explicado. Fica alinhado à
+        esquerda por padrão.
+      </dd>
+
+      <dt><strong>&lt;dd&gt; (Definition Description)</strong></dt>
+      <dd>
+        Contém a explicação ou os detalhes do termo acima. O navegador aplica
+        nativamente um recuo (indentação) à esquerda para diferenciá-lo do termo
+        principal.
+      </dd>
+
+      <dt><strong>Front-end</strong></dt>
+      <dd>
+        A camada da aplicação com a qual o usuário interage diretamente
+        (interface gráfica).
+      </dd>
+
+      <dt><strong>Back-end</strong></dt>
+      <dd>
+        A camada da aplicação responsável pelas regras de negócio, processamento
+        de dados e comunicação com o banco de dados.
+      </dd>
+    </dl>
+  </body>
+</html>
+ </code>
