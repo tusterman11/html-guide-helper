@@ -2,514 +2,476 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <title>Referência Completa: Elementos de Formulário HTML5</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Uso de IA para Geração de Landing Pages</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    
-    <nav id="main-menu">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="form.html">Formulários</a></li>
-        <li><a href="tables.html">Tabelas</a></li>
-        <li><a href="lists.html">Listas</a></li>
-      </ul>
-    </nav>
-    
-    <h1>Laboratório Completo de Formulários HTML5</h1>
-    <p>
-      Este documento contém todos os tipos de campos e elementos de formulário
-      nativos do HTML, acompanhados de explicações conceituais sobre seus
-      comportamentos e validações automáticas do navegador.
-    </p>
-    <hr />
-
-    <form action="/processar-dados" method="POST" enctype="multipart/form-data">
-      <fieldset>
-        <legend>1. Campos de Texto Básicos</legend>
-
-        <label for="nome">Texto Padrão (type="text"):</label>
-
-        <input
-          type="text"
-          id="nome"
-          name="nome"
-          placeholder="Ex: Ada Lovelace"
-          required
-        />
-        
-<small
-          ><i
-            >Conceito: O campo mais versátil. O atributo 'required' obriga o
-            preenchimento antes do envio.</i
-          ></small
-        >
-        
-
-
-
-        <label for="senha">Senha (type="password"):</label>
-
-        <input type="password" id="senha" name="senha" />
-        
-<small
-          ><i
-            >Conceito: Mascara os caracteres (com bolinhas ou asteriscos) para
-            ocultar dados sensíveis da tela. Não criptografa o dado no envio,
-            apenas na interface.</i
-          ></small
-        >
-        
-
-
-
-        <label for="biografia">Área de Texto Longo (&lt;textarea&gt;):</label
-        >
-
-        <textarea
-          id="biografia"
-          name="biografia"
-          rows="4"
-          cols="50"
-          placeholder="Descreva sua experiência profissional..."
-        ></textarea>
-        
-<small
-          ><i
-            >Conceito: Usado para textos com múltiplas linhas. Os atributos
-            'rows' e 'cols' definem o tamanho inicial nativo da caixa.</i
-          ></small
-        >
-      </fieldset>
-      
-
-
-      <fieldset>
-        <legend>2. Dados Específicos e Validação (HTML5)</legend>
-
-        <label for="email_academico">E-mail (type="email"):</label>
-
-        <input
-          type="email"
-          id="email_academico"
-          name="email_academico"
-          placeholder="aluno@senac.br"
-        />
-        
-<small
-          ><i
-            >Conceito: O navegador valida automaticamente se o texto possui o
-            formato básico de e-mail (contendo @ e um domínio). No celular,
-            adiciona o atalho de "@" ao teclado.</i
-          ></small
-        >
-        
-
-
-
-        <label for="portfolio">URL / Link (type="url"):</label>
-
-        <input
-          type="url"
-          id="portfolio"
-          name="portfolio"
-          placeholder="https://github.com/seu-usuario"
-        />
-        
-<small
-          ><i
-            >Conceito: Exige uma URL totalmente qualificada (incluindo http://
-            ou https://). No smartphone, adapta o teclado para exibir atalhos
-            como ".com".</i
-          ></small
-        >
-        
-
-
-
-        <label for="celular">Telefone (type="tel"):</label>
-
-        <input
-          type="tel"
-          id="celular"
-          name="celular"
-          placeholder="(00) 90000-0000"
-        />
-        
-<small
-          ><i
-            >Conceito: Diferente do email/url, não possui validação de formato
-            rigorosa nativa (pois formatos mudam por país), mas é crucial em
-            dispositivos móveis pois invoca imediatamente o teclado numérico de
-            discagem.</i
-          ></small
-        >
-        
-
-
-
-        <label for="pesquisa">Busca (type="search"):</label>
-
-        <input
-          type="search"
-          id="pesquisa"
-          name="pesquisa"
-          placeholder="Buscar no sistema..."
-        />
-        
-<small
-          ><i
-            >Conceito: Semanticamente indica um campo de busca. Muitos
-            navegadores adicionam nativamente um pequeno "X" no canto do campo
-            para limpar o texto rapidamente.</i
-          ></small
-        >
-      </fieldset>
-      
-
-
-      <fieldset>
-        <legend>3. Números e Controles Deslizantes</legend>
-
-        <label for="idade">Número (type="number"):</label>
-
-        <input
-          type="number"
-          id="idade"
-          name="idade"
-          min="16"
-          max="120"
-          step="1"
-        />
-        
-<small
-          ><i
-            >Conceito: Bloqueia a inserção de letras. O 'min' e 'max'
-            estabelecem o limite numérico, e 'step' define a cadência (ex:
-            step="1" bloqueia números decimais).</i
-          ></small
-        >
-        
-
-
-
-        <label for="volume">Controle Deslizante (type="range"):</label>
-
-        0
-        <input
-          type="range"
-          id="volume"
-          name="volume"
-          min="0"
-          max="100"
-          value="50"
-          oninput="resultado_range.value = value"
-        />
-        100 
-<small
-          ><i
-            >Conceito: Permite escolher um número arrastando um seletor visual
-            em vez de digitar. Ideal para configurações onde o número exato
-            importa menos que a proporção (como volume ou brilho).</i
-          ></small
-        >
-        
-
-
-
-        <label>Saída de Dados (&lt;output&gt;):</label>
-
-        <output id="resultado_range"
-          >O valor selecionado no slider é: 50</output
-        >
-        
-<small
-          ><i
-            >Conceito: Elemento semântico criado especificamente para exibir os
-            resultados de um cálculo ou a ação de um script (normalmente
-            atualizado via JS, mas inserido aqui para conhecimento da tag).</i
-          ></small
-        >
-      </fieldset>
-      
-
-
-      <fieldset>
-        <legend>4. Seletores de Data e Hora</legend>
-        <details>
-          <summary><b>Nota sobre compatibilidade (Clique para ler)</b></summary>
+    <div id="container">
+      <header id="main-header"></header>
+      <aside id="main-nav">
+        <nav id="menu-principal">
+          <ul>
+            <li>
+              <a href="index.html">Início</a>
+            </li>
+            <li>
+              <a href="form.html">Formulários</a>
+            </li>
+            <li>
+              <a href="tables.html">Tabelas</a>
+            </li>
+            <li>
+              <a href="lists.html">Listas</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main-content">
+        <div class="wrapper">
+          <h1>Laboratório Completo de Formulários HTML5</h1>
           <p>
-            Todos os campos abaixo abrem interfaces de calendário e relógio
-            nativas do sistema operacional/navegador, sem precisar de
-            bibliotecas externas. A aparência muda dependendo se o usuário está
-            no Windows, Mac, iOS ou Android.
+            Este documento contém todos os tipos de campos e elementos de
+            formulário nativos do HTML, acompanhados de explicações conceituais
+            sobre seus comportamentos e validações automáticas do navegador.
           </p>
-        </details>
-        
+          <hr />
 
+          <form
+            action="/processar-dados"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <fieldset>
+              <legend>1. Campos de Texto Básicos</legend>
 
-        <label for="nascimento">Data Completa (type="date"):</label>
+              <label for="nome">Texto Padrão (type="text"):</label><br />
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Ex: Ada Lovelace"
+                required
+              />
+              <br /><small
+                ><i
+                  >Conceito: O campo mais versátil. O atributo 'required' obriga
+                  o preenchimento antes do envio.</i
+                ></small
+              >
+              <br /><br />
 
-        <input type="date" id="nascimento" name="nascimento" />
-        
+              <label for="senha">Senha (type="password"):</label><br />
+              <input type="password" id="senha" name="senha" />
+              <br /><small
+                ><i
+                  >Conceito: Mascara os caracteres (com bolinhas ou asteriscos)
+                  para ocultar dados sensíveis da tela. Não criptografa o dado
+                  no envio, apenas na interface.</i
+                ></small
+              >
+              <br /><br />
 
+              <label for="biografia"
+                >Área de Texto Longo (&lt;textarea&gt;):</label
+              ><br />
+              <textarea
+                id="biografia"
+                name="biografia"
+                rows="4"
+                cols="50"
+                placeholder="Descreva sua experiência profissional..."
+              ></textarea>
+              <br /><small
+                ><i
+                  >Conceito: Usado para textos com múltiplas linhas. Os
+                  atributos 'rows' e 'cols' definem o tamanho inicial nativo da
+                  caixa.</i
+                ></small
+              >
+            </fieldset>
+            <br />
 
+            <fieldset>
+              <legend>2. Dados Específicos e Validação (HTML5)</legend>
 
-        <label for="reuniao">Data e Hora Local (type="datetime-local"):</label
-        >
+              <label for="email_academico">E-mail (type="email"):</label><br />
+              <input
+                type="email"
+                id="email_academico"
+                name="email_academico"
+                placeholder="aluno@senac.br"
+              />
+              <br /><small
+                ><i
+                  >Conceito: O navegador valida automaticamente se o texto
+                  possui o formato básico de e-mail (contendo @ e um domínio).
+                  No celular, adiciona o atalho de "@" ao teclado.</i
+                ></small
+              >
+              <br /><br />
 
-        <input type="datetime-local" id="reuniao" name="reuniao" />
-        
-<small
-          ><i
-            >Conceito: Captura o dia e a hora simultaneamente, no fuso horário
-            do aparelho do usuário.</i
-          ></small
-        >
-        
+              <label for="portfolio">URL / Link (type="url"):</label><br />
+              <input
+                type="url"
+                id="portfolio"
+                name="portfolio"
+                placeholder="https://github.com/seu-usuario"
+              />
+              <br /><small
+                ><i
+                  >Conceito: Exige uma URL totalmente qualificada (incluindo
+                  http:// ou https://). No smartphone, adapta o teclado para
+                  exibir atalhos como ".com".</i
+                ></small
+              >
+              <br /><br />
 
+              <label for="celular">Telefone (type="tel"):</label><br />
+              <input
+                type="tel"
+                id="celular"
+                name="celular"
+                placeholder="(00) 90000-0000"
+              />
+              <br /><small
+                ><i
+                  >Conceito: Diferente do email/url, não possui validação de
+                  formato rigorosa nativa (pois formatos mudam por país), mas é
+                  crucial em dispositivos móveis pois invoca imediatamente o
+                  teclado numérico de discagem.</i
+                ></small
+              >
+              <br /><br />
 
+              <label for="pesquisa">Busca (type="search"):</label><br />
+              <input
+                type="search"
+                id="pesquisa"
+                name="pesquisa"
+                placeholder="Buscar no sistema..."
+              />
+              <br /><small
+                ><i
+                  >Conceito: Semanticamente indica um campo de busca. Muitos
+                  navegadores adicionam nativamente um pequeno "X" no canto do
+                  campo para limpar o texto rapidamente.</i
+                ></small
+              >
+            </fieldset>
+            <br />
 
-        <label for="despertador">Apenas Hora (type="time"):</label>
+            <fieldset>
+              <legend>3. Números e Controles Deslizantes</legend>
 
-        <input type="time" id="despertador" name="despertador" />
-        
+              <label for="idade">Número (type="number"):</label><br />
+              <input
+                type="number"
+                id="idade"
+                name="idade"
+                min="16"
+                max="120"
+                step="1"
+              />
+              <br /><small
+                ><i
+                  >Conceito: Bloqueia a inserção de letras. O 'min' e 'max'
+                  estabelecem o limite numérico, e 'step' define a cadência (ex:
+                  step="1" bloqueia números decimais).</i
+                ></small
+              >
+              <br /><br />
 
+              <label for="volume">Controle Deslizante (type="range"):</label
+              ><br />
+              0
+              <input
+                type="range"
+                id="volume"
+                name="volume"
+                min="0"
+                max="100"
+                value="50"
+                oninput="resultado_range.value = value"
+              />
+              100 <br /><small
+                ><i
+                  >Conceito: Permite escolher um número arrastando um seletor
+                  visual em vez de digitar. Ideal para configurações onde o
+                  número exato importa menos que a proporção (como volume ou
+                  brilho).</i
+                ></small
+              >
+              <br /><br />
 
+              <label>Saída de Dados (&lt;output&gt;):</label><br />
+              <output id="resultado_range"
+                >O valor selecionado no slider é: 50</output
+              >
+              <br /><small
+                ><i
+                  >Conceito: Elemento semântico criado especificamente para
+                  exibir os resultados de um cálculo ou a ação de um script
+                  (normalmente atualizado via JS, mas inserido aqui para
+                  conhecimento da tag).</i
+                ></small
+              >
+            </fieldset>
+            <br />
 
-        <label for="faturamento">Mês e Ano (type="month"):</label>
+            <fieldset>
+              <legend>4. Seletores de Data e Hora</legend>
+              <details>
+                <summary>
+                  <b>Nota sobre compatibilidade (Clique para ler)</b>
+                </summary>
+                <p>
+                  Todos os campos abaixo abrem interfaces de calendário e
+                  relógio nativas do sistema operacional/navegador, sem precisar
+                  de bibliotecas externas. A aparência muda dependendo se o
+                  usuário está no Windows, Mac, iOS ou Android.
+                </p>
+              </details>
+              <br />
 
-        <input type="month" id="faturamento" name="faturamento" />
-        
-<small
-          ><i
-            >Conceito: Útil para selecionar competências (ex: validade de cartão
-            de crédito). Retorna o formato YYYY-MM.</i
-          ></small
-        >
-        
+              <label for="nascimento">Data Completa (type="date"):</label><br />
+              <input type="date" id="nascimento" name="nascimento" />
+              <br /><br />
 
+              <label for="reuniao"
+                >Data e Hora Local (type="datetime-local"):</label
+              ><br />
+              <input type="datetime-local" id="reuniao" name="reuniao" />
+              <br /><small
+                ><i
+                  >Conceito: Captura o dia e a hora simultaneamente, no fuso
+                  horário do aparelho do usuário.</i
+                ></small
+              >
+              <br /><br />
 
+              <label for="despertador">Apenas Hora (type="time"):</label><br />
+              <input type="time" id="despertador" name="despertador" />
+              <br /><br />
 
-        <label for="sprint">Semana do Ano (type="week"):</label>
+              <label for="faturamento">Mês e Ano (type="month"):</label><br />
+              <input type="month" id="faturamento" name="faturamento" />
+              <br /><small
+                ><i
+                  >Conceito: Útil para selecionar competências (ex: validade de
+                  cartão de crédito). Retorna o formato YYYY-MM.</i
+                ></small
+              >
+              <br /><br />
 
-        <input type="week" id="sprint" name="sprint" />
-        
-<small
-          ><i
-            >Conceito: Permite selecionar uma semana inteira do ano. O navegador
-            exibe qual é o número da semana selecionada.</i
-          ></small
-        >
-      </fieldset>
-      
+              <label for="sprint">Semana do Ano (type="week"):</label><br />
+              <input type="week" id="sprint" name="sprint" />
+              <br /><small
+                ><i
+                  >Conceito: Permite selecionar uma semana inteira do ano. O
+                  navegador exibe qual é o número da semana selecionada.</i
+                ></small
+              >
+            </fieldset>
+            <br />
 
+            <fieldset>
+              <legend>5. Elementos de Seleção</legend>
 
-      <fieldset>
-        <legend>5. Elementos de Seleção</legend>
+              <p><b>Múltipla Escolha (type="checkbox")</b></p>
+              <small
+                ><i
+                  >Conceito: Múltiplas caixas podem ser marcadas. Ideal para
+                  "Selecione as tecnologias que você domina".</i
+                ></small
+              ><br />
+              <input
+                type="checkbox"
+                id="tech_react"
+                name="stack"
+                value="react"
+              />
+              <label for="tech_react">React</label><br />
+              <input type="checkbox" id="tech_node" name="stack" value="node" />
+              <label for="tech_node">Node.js</label><br />
+              <input
+                type="checkbox"
+                id="tech_ts"
+                name="stack"
+                value="typescript"
+                checked
+              />
+              <label for="tech_ts">TypeScript</label>
+              <br /><br />
 
-        <p><b>Múltipla Escolha (type="checkbox")</b></p>
-        <small
-          ><i
-            >Conceito: Múltiplas caixas podem ser marcadas. Ideal para
-            "Selecione as tecnologias que você domina".</i
-          ></small
-        >
+              <p><b>Escolha Única (type="radio")</b></p>
+              <small
+                ><i
+                  >Conceito: Quando vários inputs do tipo radio possuem o
+                  <b>mesmo atributo 'name'</b>, eles formam um grupo onde apenas
+                  um pode ser selecionado por vez.</i
+                ></small
+              ><br />
+              <input type="radio" id="turno_manha" name="turno" value="manha" />
+              <label for="turno_manha">Manhã</label><br />
+              <input type="radio" id="turno_noite" name="turno" value="noite" />
+              <label for="turno_noite">Noite</label>
+              <br /><br />
 
-        <input type="checkbox" id="tech_react" name="stack" value="react" />
-        <label for="tech_react">React</label>
+              <label for="curso"
+                ><b
+                  >Lista Suspensa (&lt;select&gt; e &lt;optgroup&gt;):</b
+                ></label
+              ><br />
+              <select id="curso" name="curso">
+                <option value="">Selecione um curso...</option>
+                <optgroup label="Tecnologia">
+                  <option value="ads">
+                    Análise e Desenvolvimento de Sistemas
+                  </option>
+                  <option value="redes">Redes de Computadores</option>
+                </optgroup>
+                <optgroup label="Gestão">
+                  <option value="rh">Recursos Humanos</option>
+                </optgroup>
+              </select>
+              <br /><small
+                ><i
+                  >Conceito: A tag optgroup agrupa as opções (options)
+                  logicamente, criando cabeçalhos não-clicáveis dentro da lista
+                  suspensa.</i
+                ></small
+              >
+              <br /><br />
 
-        <input type="checkbox" id="tech_node" name="stack" value="node" />
-        <label for="tech_node">Node.js</label>
+              <label for="linguagem"
+                ><b>Autocompletar Nativo (&lt;datalist&gt;):</b></label
+              ><br />
+              <input
+                list="linguagens_sugeridas"
+                id="linguagem"
+                name="linguagem"
+                placeholder="Digite ou escolha..."
+              />
+              <datalist id="linguagens_sugeridas">
+                <option value="JavaScript"></option>
+                <option value="Python"></option>
+                <option value="Java"></option>
+                <option value="C#"></option>
+              </datalist>
+              <br /><small
+                ><i
+                  >Conceito: Diferente do &lt;select&gt;, onde você é obrigado a
+                  escolher o que está na lista, o &lt;datalist&gt; acoplado a um
+                  input permite que o usuário aceite a sugestão ou digite algo
+                  completamente novo.</i
+                ></small
+              >
+            </fieldset>
+            <br />
 
-        <input
-          type="checkbox"
-          id="tech_ts"
-          name="stack"
-          value="typescript"
-          checked
-        />
-        <label for="tech_ts">TypeScript</label>
-        
+            <fieldset>
+              <legend>6. Upload e Seleção de Cor</legend>
 
+              <label for="curriculo">Envio de Arquivo (type="file"):</label
+              ><br />
+              <input
+                type="file"
+                id="curriculo"
+                name="curriculo"
+                accept=".pdf, .doc, .docx"
+                multiple
+              />
+              <br /><small
+                ><i
+                  >Conceito: Abre o explorador de arquivos do sistema. O
+                  'accept' filtra o que aparece, e 'multiple' deixa enviar mais
+                  de um arquivo de uma vez. Note que o formulário precisa ter o
+                  atributo <b>enctype="multipart/form-data"</b> para enviar os
+                  arquivos reais para o backend.</i
+                ></small
+              >
+              <br /><br />
 
+              <label for="cor_tema">Seletor de Cor (type="color"):</label><br />
+              <input
+                type="color"
+                id="cor_tema"
+                name="cor_tema"
+                value="#0055ff"
+              />
+              <br /><small
+                ><i
+                  >Conceito: Abre a paleta de cores nativa do sistema
+                  operacional, retornando o valor em formato hexadecimal
+                  (#RRGGBB).</i
+                ></small
+              >
+            </fieldset>
+            <br />
 
-        <p><b>Escolha Única (type="radio")</b></p>
-        <small
-          ><i
-            >Conceito: Quando vários inputs do tipo radio possuem o
-            <b>mesmo atributo 'name'</b>, eles formam um grupo onde apenas um
-            pode ser selecionado por vez.</i
-          ></small
-        >
+            <fieldset>
+              <legend>7. Campos Ocultos e Ações (Botões)</legend>
 
-        <input type="radio" id="turno_manha" name="turno" value="manha" />
-        <label for="turno_manha">Manhã</label>
+              <p><b>Campo Oculto (type="hidden"):</b></p>
+              <small
+                ><i
+                  >Conceito: Este campo está no HTML abaixo, mas é invisível.
+                  Serve para armazenar dados (como o ID do usuário ou um token
+                  de segurança) que precisam ser enviados ao backend sem que o
+                  usuário os veja ou altere diretamente na tela.</i
+                ></small
+              >
+              <input
+                type="hidden"
+                id="token_seguranca"
+                name="token_seguranca"
+                value="9d8f7a6b5c4d3e2f1"
+              />
+              <br /><br />
 
-        <input type="radio" id="turno_noite" name="turno" value="noite" />
-        <label for="turno_noite">Noite</label>
-        
+              <p><b>Tipos de Botões:</b></p>
 
+              <input
+                type="button"
+                value="Botão Comum (Não faz nada nativamente)"
+              />
+              <input type="reset" value="Limpar Todos os Campos" />
+              <input type="submit" value="Enviar Dados" />
+              <br /><br />
 
+              <button type="submit">Enviar com tag &lt;button&gt;</button>
+              <br /><small
+                ><i
+                  >Conceito: O type="reset" limpa o formulário de volta aos
+                  valores originais. O type="submit" tenta disparar a "action"
+                  do formulário após checar as validações. A tag &lt;button&gt;
+                  é mais moderna e flexível que o &lt;input type="button"&gt;,
+                  pois permite colocar imagens e ícones dentro dela.</i
+                ></small
+              >
 
-        <label for="curso"
-          ><b>Lista Suspensa (&lt;select&gt; e &lt;optgroup&gt;):</b></label
-        >
-
-        <select id="curso" name="curso">
-          <option value="">Selecione um curso...</option>
-          <optgroup label="Tecnologia">
-            <option value="ads">Análise e Desenvolvimento de Sistemas</option>
-            <option value="redes">Redes de Computadores</option>
-          </optgroup>
-          <optgroup label="Gestão">
-            <option value="rh">Recursos Humanos</option>
-          </optgroup>
-        </select>
-        
-<small
-          ><i
-            >Conceito: A tag optgroup agrupa as opções (options) logicamente,
-            criando cabeçalhos não-clicáveis dentro da lista suspensa.</i
-          ></small
-        >
-        
-
-
-
-        <label for="linguagem"
-          ><b>Autocompletar Nativo (&lt;datalist&gt;):</b></label
-        >
-
-        <input
-          list="linguagens_sugeridas"
-          id="linguagem"
-          name="linguagem"
-          placeholder="Digite ou escolha..."
-        />
-        <datalist id="linguagens_sugeridas">
-          <option value="JavaScript"></option>
-          <option value="Python"></option>
-          <option value="Java"></option>
-          <option value="C#"></option>
-        </datalist>
-        
-<small
-          ><i
-            >Conceito: Diferente do &lt;select&gt;, onde você é obrigado a
-            escolher o que está na lista, o &lt;datalist&gt; acoplado a um input
-            permite que o usuário aceite a sugestão ou digite algo completamente
-            novo.</i
-          ></small
-        >
-      </fieldset>
-      
-
-
-      <fieldset>
-        <legend>6. Upload e Seleção de Cor</legend>
-
-        <label for="curriculo">Envio de Arquivo (type="file"):</label>
-
-        <input
-          type="file"
-          id="curriculo"
-          name="curriculo"
-          accept=".pdf, .doc, .docx"
-          multiple
-        />
-        
-<small
-          ><i
-            >Conceito: Abre o explorador de arquivos do sistema. O 'accept'
-            filtra o que aparece, e 'multiple' deixa enviar mais de um arquivo
-            de uma vez. Note que o formulário precisa ter o atributo
-            <b>enctype="multipart/form-data"</b> para enviar os arquivos reais
-            para o backend.</i
-          ></small
-        >
-        
-
-
-
-        <label for="cor_tema">Seletor de Cor (type="color"):</label>
-
-        <input type="color" id="cor_tema" name="cor_tema" value="#0055ff" />
-        
-<small
-          ><i
-            >Conceito: Abre a paleta de cores nativa do sistema operacional,
-            retornando o valor em formato hexadecimal (#RRGGBB).</i
-          ></small
-        >
-      </fieldset>
-      
-
-
-      <fieldset>
-        <legend>7. Campos Ocultos e Ações (Botões)</legend>
-
-        <p><b>Campo Oculto (type="hidden"):</b></p>
-        <small
-          ><i
-            >Conceito: Este campo está no HTML abaixo, mas é invisível. Serve
-            para armazenar dados (como o ID do usuário ou um token de segurança)
-            que precisam ser enviados ao backend sem que o usuário os veja ou
-            altere diretamente na tela.</i
-          ></small
-        >
-        <input
-          type="hidden"
-          id="token_seguranca"
-          name="token_seguranca"
-          value="9d8f7a6b5c4d3e2f1"
-        />
-        
-
-
-
-        <p><b>Tipos de Botões:</b></p>
-
-        <input type="button" value="Botão Comum (Não faz nada nativamente)" />
-        <input type="reset" value="Limpar Todos os Campos" />
-        <input type="submit" value="Enviar Dados" />
-        
-
-
-
-        <button type="submit">Enviar com tag &lt;button&gt;</button>
-        
-<small
-          ><i
-            >Conceito: O type="reset" limpa o formulário de volta aos valores
-            originais. O type="submit" tenta disparar a "action" do formulário
-            após checar as validações. A tag &lt;button&gt; é mais moderna e
-            flexível que o &lt;input type="button"&gt;, pois permite colocar
-            imagens e ícones dentro dela.</i
-          ></small
-        >
-
-        
-
-
-        <p><b>Botão de Imagem (type="image"):</b></p>
-        <small
-          ><i
-            >Conceito: Funciona exatamente como um submit, mas usa uma imagem
-            como botão. Pouco utilizado hoje em dia devido ao CSS, mas faz parte
-            da especificação. (O alt aparece porque não há imagem no src).</i
-          ></small
-        >
-
-        <input
-          type="image"
-          src="imgs/nevermore.png"
-          alt="Clique aqui para enviar"
-          width="300"
-          height="300"
-        />
-      </fieldset>
-    </form>
+              <br /><br />
+              <p><b>Botão de Imagem (type="image"):</b></p>
+              <small
+                ><i
+                  >Conceito: Funciona exatamente como um submit, mas usa uma
+                  imagem como botão. Pouco utilizado hoje em dia devido ao CSS,
+                  mas faz parte da especificação. (O alt aparece porque não há
+                  imagem no src).</i
+                ></small
+              ><br />
+              <input
+                type="image"
+                src="caminho/para/imagem.png"
+                alt="Clique aqui para enviar"
+                width="150"
+                height="30"
+              />
+            </fieldset>
+          </form>
+        </div>
+      </main>
+      <footer id="main-footer"></footer>
+    </div>
   </body>
 </html>
- 
